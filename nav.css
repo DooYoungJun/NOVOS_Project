@@ -104,7 +104,7 @@ body {
 }
 
 @media (max-width: 922px) {
-    .navbar {
+    .navbar{
         justify-content: space-between;
     }
 
@@ -131,10 +131,6 @@ body {
         animation: slideDown 0.5s ease-in-out; /* 애니메이션 적용 */
     }
 
-    .navbar-menu.active {
-        display: flex;
-    }
-
     .navbar-item {
         margin: 10px 0;
     }
@@ -155,10 +151,6 @@ body {
 
     .navbar-toggle.active::before {
         content: '\2715'; /* X 아이콘 */
-    }
-
-    .search-container {
-        display: none;
     }
 
     .navbar-menu {
@@ -193,9 +185,5 @@ body {
     .navbar-item:hover .navbar-subtext,
     .navbar-item.active .navbar-subtext {
         color: #fff;
-    }
-
-    .navbar-toggle.active + .search-container {
-        display: flex;
     }
 }

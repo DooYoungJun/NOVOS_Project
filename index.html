@@ -23,8 +23,16 @@
         .then(response => response.text())
         .then(data => {
           document.getElementById('navbar').innerHTML = data;
+          document.getElementById('navbar-toggle').addEventListener('click', function() {
+          var menu = document.querySelector('.navbar-menu');
+          menu.classList.toggle('active');
+          var toggle = document.getElementById('navbar-toggle');
+          toggle.classList.toggle('change');
+          var logo = document.querySelector('.navbar-logo');
+          logo.classList.toggle('hidden');
+          });
         });
-    });</script>  
+    });</script>
 </head>
 <body>
     <div id="navbar"></div>
