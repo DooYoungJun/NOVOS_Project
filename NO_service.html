@@ -3,30 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Company</title>
- 
     <!-- 반응형 웹 만들기 -->
-    <!-- 1. 모바일용 css -->
     <link rel="stylesheet" href="./NO_service_M.css" media="(max-width:600px)">
- 
-    <!-- 2. 데스크탑용 외부 스타일시트 적용 -->
     <link rel="stylesheet" href="./NO_service.css" media="(min-width:600px)">
 </head>
 <body>
-    
-    <div id="page">
- 
+    <div id="page"> <!--페이지 전체를 감싼다-->
         <header>
             <div id="logo">
                 <img src="NOOVS mainLogo.png" alt="Logo">
             </div>
- 
             <div id="top_menu">
-                <a href="#">let</a> 
+                <a href="#">HOME</a> 
                 <a href="#">NOTICE</a> 
                 <a href="#">LOGIN</a> 
                 <a href="#">JOIN</a>
             </div>
- 
             <nav>
                 <ul>
                     <li><a href="#">COMPANY</a></li>
@@ -36,27 +28,38 @@
                     <li><a href="#">RECRUIT</a></li>
                 </ul>
             </nav>
- 
         </header>
- 
         <article id="content">
             <section id="main">
-                <img src="./imgs_company/main_img.png" alt="main img">
+                <div id="dynamicImage"></div>
             </section>
             <section>
                 <ul id="banner">
                     <li><a href="#"><img src="./imgs_company/banner1.png" alt="banner1"></a></li>
                     <li><a href="#"><img src="./imgs_company/banner2.png" alt="banner2"></a></li>
                 </ul>
- 
             </section>
- 
         </article>
- 
-        <footer>
-            <img src="./imgs_company/address.png" alt="address">
+        <footer id="footer-placeholder">
+            <!-- footer.js가 푸터 내용을 동적으로 추가할 것입니다 -->
         </footer>
- 
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // footer.html 파일을 불러와서 #footer-placeholder에 삽입하는 스크립트
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                });
+
+            // 동적으로 이미지 추가하는 코드
+            var imageUrl = './imgs_company/dynamic_image.png'; // 불러올 이미지 경로
+            var img = document.createElement('img');
+            img.src = imageUrl;
+            img.alt = 'Dynamic Image';
+            document.getElementById('dynamicImage').appendChild(img);
+        });
+    </script>
 </body>
 </html>
