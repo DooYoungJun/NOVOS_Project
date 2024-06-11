@@ -71,14 +71,14 @@ nav li a{color: white;}
 
 .color-box {
     background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-                url('NOOVS\ mainLogo.png'); /* 여기에 원하는 이미지 경로를 넣으세요 */
+                url('Service_Test.jpeg'); /* 여기에 원하는 이미지 경로를 넣으세요 */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     padding: 20px;
     border-radius: 10px;
-    width: 200px;
-    height: 200px;
+    width: auto;
+    height: 100px;
     text-align: center;
     opacity: 0; /* Initially hidden */
     transition: opacity 1s ease-in-out;
@@ -90,6 +90,11 @@ nav li a{color: white;}
 
 .spacer {
     height: 1000px; /* For demonstration purposes */
+}
+
+.opacity-control {
+    margin: 20px;
+    text-align: center;
 }
 
 

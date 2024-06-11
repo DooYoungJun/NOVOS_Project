@@ -42,15 +42,13 @@
         회사 소개 글 게시 예정 <제목> 
         </div>
 
-        <!--테스트-->
-
-
         <!--footer-->
         <footer id="footer-placeholder">
             <!-- footer.js가 푸터 내용을 동적으로 추가할 것입니다 -->
         </footer>
     </div>
 
+    <!--사진 효과 넣기-->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const observer = new IntersectionObserver(function (entries) {
@@ -64,9 +62,15 @@
 
             const target = document.querySelector('.color-box');
             observer.observe(target);
+
+            const opacitySlider = document.getElementById('opacity-slider');
+            opacitySlider.addEventListener('input', function () {
+                target.style.opacity = this.value;
+            });
         });
     </script>
-    
+
+    <!--footer-->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             // footer.html 파일을 불러와서 #footer-placeholder에 삽입하는 스크립트
