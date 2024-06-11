@@ -1,154 +1,53 @@
-<!-- <html>
-    <head>
-        <style>
-            *{padding: 0; margin: 0;}
-
-            :root {
-            --accent-color: #f3ff87;
-            --text-color: #f0f4f5;
-            --background-color: #0b002b;}
-
-            .body {
-            margin: 0;
-            font-family: 'Montserrat';}
-
-            a {
-            text-decoration: none;
-            color: var(--text-color);}
-
-            h1, h2, h3{
-                margin-top: 0;
-                margin-bottom: var(1em);
-                line-height: var(1.4em);
-            }
-
-            .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: var(--background-color);
-            padding: 8px 12px;}
-
-            @media (min-width: 992px){
-                .nav_logo .nav_menu{
-                    margin-right: 2em;
-                    width: 100%;
-                }
-            }
-
-            @media (min-width: 992px){
-                .nav_logo{
-                    text-align: left;
-                    padding-top: 1.1rem;
-                    margin-bottom: 1rem;
-                    margin-left: 0;
-                }
-            }
-
-            @media (max-width: 991.98px){
-                .nav_logo{
-                    padding-top: .5rem;
-                    margin-bottom: .5rem;
-                    white-space: normal;
-                }
-            }
-
-            .nav_logo {
-                text-align: center;
-                font-weight: 700;
-                font-size: 1.5rem;
-                white-space: nowrap;
-                line-height: var(1.4em);}
-            
-            .nav_logo i {
-                color: var(--accent-color);}
-            
-            .nav_logo span {
-                color: var(--accent-color);}
-            
-            .nav_menu {
-                display: flex;
-                list-style: none;
-                padding-left: 0;}
-            
-            .nav_menu li {
-                padding: 8px 12px;}
-            
-            .nav_menu li:hover {
-                color: var(--background-color);
-                background-color: var(--accent-color);
-                border-radius: 4px;}
-            
-            .nav_menu li a:hover {
-                color: var(--background-color);}
-            
-            .nav_icons {
-                display: flex;
-                color: #7dc0ff;
-                list-style: none;
-                padding-left: 0;}
-            
-            .nav_icons li {
-                padding: 8px 5px;}
-            
-            .navbar_toggleBtn {
-                display: none;
-                color:var(--text-color);
-                position: absolute;
-                right: 32px;
-                font-size: 24px;}
-        </style>
-    </head>
-    <body>
-        <nav class="navbar">
-            <div class="nav_logo">
-                <i class="fa-solid fa-star"></i>
-                <a href=""><img src="KakaoTalk_20240610_094557322.png" width="250px" height="70px"></a>
-            </div>
-            <ul class="nav_menu">
-                <li><a href="">Home</a></li>
-                <li><a href="">Location Information</a></li>
-                <li><a href="">Weather Information</a></li>
-                <li><a href="">FQA</a></li>
-                <li><a href="">Review</a></li>
-            </ul>
-            <ul class="nav_icons">
-                <li><i class="fa-brands fa-twitter"></i></li>
-                <li><i class="fa-brands fa-facebook"></i></li>
-            </ul>
-            <a href="#" class="navbar_toggleBtn">
-                <i class="fa-solid fa-bars"></i>
-            </a>
-        </nav>
-    </body>
-</html> -->
-
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
+    <title>nav bar</title>
     <link rel="stylesheet" href="nav.css">
 </head>
 <body>
     <nav class="navbar">
+        <div class="navbar-toggle" id="navbar-toggle">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
         <div class="navbar-logo">
             <img src="KakaoTalk_20240610_094557322.png" alt="Logo">
         </div>
         <ul class="navbar-menu">
-            <li class="navbar-item active"><a href="#">Home</a></li>
-            <li class="navbar-item"><a href="#">About</a></li>
-            <li class="navbar-item"><a href="#">Services</a></li>
-            <li class="navbar-item"><a href="#">Contact</a></li>
+            <li class="navbar-item active">
+                <a href="#">ホーム</a>
+                <span class="navbar-subtext">Home</span>
+            </li>
+            <li class="navbar-item">
+                <a href="#">サービス</a>
+                <span class="navbar-subtext">Service</span>
+            </li>
+            <li class="navbar-item">
+                <a href="#">会社案内</a>
+                <span class="navbar-subtext">Company</span>
+            </li>
+            <li class="navbar-item">
+                <a href="#">採用情報</a>
+                <span class="navbar-subtext">Recruit</span>
+            </li>
+            <li class="navbar-item">
+                <a href="#">お問い合わせ</a>
+                <span class="navbar-subtext">Contact</span>
+            </li>
         </ul>
-        <div class="navbar-toggle" id="navbar-toggle">
-            &#9776;
-        </div>
     </nav>
 
     <script>
         document.getElementById('navbar-toggle').addEventListener('click', function() {
-            document.querySelector('.navbar-menu').classList.toggle('active');
-        });
+        var menu = document.querySelector('.navbar-menu');
+        menu.classList.toggle('active');
+        var toggle = document.getElementById('navbar-toggle');
+        toggle.classList.toggle('change');
+        var logo = document.querySelector('.navbar-logo');
+        logo.classList.toggle('hidden');
+    });
     </script>
 </body>
 </html>
