@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Company</title>
+    <title>NOVOS | </title>
     <!-- 반응형 웹 만들기 -->
     <link rel="stylesheet" href="./NO_service_M.css" media="(max-width:600px)">
     <link rel="stylesheet" href="./NO_service.css" media="(min-width:600px)">
@@ -10,7 +10,7 @@
 <body>
     <div id="page"> <!--페이지 전체를 감싼다-->
         <header>
-            <div id="logo">
+            <div id="logo"> <!-- Menubar -->
                 <img src="NOOVS mainLogo.png" alt="Logo">
             </div>
             <div id="top_menu">
@@ -27,23 +27,46 @@
                     <li><a href="#">SERVICE</a></li>
                     <li><a href="#">RECRUIT</a></li>
                 </ul>
-            </nav>
+            </nav> <!--메뉴바 끝-->
         </header>
-        <article id="content">
-            <section id="main">
-                <div id="dynamicImage"></div>
-            </section>
-            <section>
-                <ul id="banner">
-                    <li><a href="#"><img src="./imgs_company/banner1.png" alt="banner1"></a></li>
-                    <li><a href="#"><img src="./imgs_company/banner2.png" alt="banner2"></a></li>
-                </ul>
-            </section>
-        </article>
+
+        <!-- 본문 -->
+        <!-- 홈페이지 헤더 큰 파란색 창-->
+        <div class="color-box">
+            SERVICE
+        </div>
+
+        <!--배너 글-->
+        <div 
+        style="border-top: 3px solid blue; border-right: 1px solid white; border-bottom: 1px solid white; border-left: 1px solid white; padding: 10px">
+        회사 소개 글 게시 예정 <제목> 
+        </div>
+
+        <!--테스트-->
+
+
+        <!--footer-->
         <footer id="footer-placeholder">
             <!-- footer.js가 푸터 내용을 동적으로 추가할 것입니다 -->
         </footer>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const observer = new IntersectionObserver(function (entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal');
+                        observer.unobserve(entry.target); // Unobserve after revealing
+                    }
+                });
+            });
+
+            const target = document.querySelector('.color-box');
+            observer.observe(target);
+        });
+    </script>
+    
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             // footer.html 파일을 불러와서 #footer-placeholder에 삽입하는 스크립트
