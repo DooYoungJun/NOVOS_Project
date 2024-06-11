@@ -64,6 +64,15 @@ footer{
     text-align: center;
     background-color: #f1f1f1;
 }
- 
+
+.footer-content {
+    padding: 10px;
+}
+
+.footer-content img {
+    max-width: 100px;
+    margin-top: 10px;
+}
+
 /* 전체 페이지가 가운데로 오도록 */
 #page{width: 820px; margin: 0px auto;}
