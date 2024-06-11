@@ -43,7 +43,15 @@ nav li a:hover{
     background-color: white;
     color: black;
 }
- 
+
+.color-box{
+    background-color: #ffcc00; /* 원하는 색상 코드로 수정하세요 */
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+}
+
 #content #main img{ width: 100%; border: 1px solid gray;}
  
 #content #banner li{
