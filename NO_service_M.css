@@ -1,66 +1,103 @@
-*{margin: 0; padding: 0;}
-ul{list-style: none;}
-a{text-decoration: none;}
+*{margin: 0px; padding: 0px;}
+ul{list-style: none;} /* 리스트 앞에 . 같은거 제거*/
+a{text-decoration: none;} /* 링크에 밑줄 같은거 제거*/
  
 header{
-    width: 100%;
-    background-color: #2d3a4b;
+    width: 800px; /*메인 이미지의 너비 사이즈와 같음*/
+    height: 95px;
+    background-color: white;
+ 
+    /* header 안에 요소들을 모두 absolute 포지션으로 배치할 것이라서 */
+    /* absolute 요소가 header의 좌상단을 기준으로 하려면 */
+    /* header의 position이 relative 여야만 함 */
     position: relative;
 }
  
-#log{
-    padding-top: 30px;
-    padding-left: 30px;
- 
+#logo img{
+    width: 150px;
+    height: auto;
+}
+
+/* 제목영역안에 있는 메인 로고 이미지 위치 지정 */
+#logo{
+    position: absolute;
+    top: 30px;
+    left: 30px;
 }
  
+/* 제목영역안에 오른쪽 상단에 top_menu 배치 */
 #top_menu{
     position: absolute;
-    right: 10px;
     top: 20px;
-    color: white;
+    right: 10px;
+    color: yellowgreen;
 }
-#top_menu a{color: white;font-size: 14px;}
  
+/* top_menu a의 글시 하얀색으로 */
+#top_menu a{color: black;}
+ 
+/* 헤더 영역안에 네비게이션 메뉴 배치 */
 nav{
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-    margin-top: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 220px;
+    font-size: 16px;
 }
  
 nav li{
-    line-height: 3em;
-    border-bottom: 1px solid #223344;
+    display: inline;
+    margin-left: 30px;
 }
  
-nav li a{
-    color: white;
-    display: block;
-    text-align: center;
-}
+nav li a{color: white;}
  
-nav li a:hover{
-    background-color: white;
-    color: black;
+/* 콘텐츠 영역의 알래에 있는 배너 이미지 inline으로 */
+#content li{
+    display: inline;
+    margin-left: 50px;
 }
 
-.color-box{
-    background-color: #ffcc00; /* 원하는 색상 코드로 수정하세요 */
+#dynamicImage img {
+    width: 100%; /* 이미지의 너비를 부모 요소에 맞게 설정 */
+    max-width: 400px; /* 최대 너비를 설정하여 이미지가 너무 커지지 않도록 함 */
+    height: auto; /* 높이를 자동으로 설정하여 비율을 유지 */
+}
+
+    /* #banner 내부의 이미지 크기 조절 */
+#banner img {
+    width: 100px; /* 이미지의 고정 너비를 설정 */
+    height: auto; /* 높이를 자동으로 설정하여 비율을 유지 */
+}
+
+/*사진 효과 */
+.color-box {
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+                url('Service_Test.jpeg'); /* 여기에 원하는 이미지 경로를 넣으세요 */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     padding: 20px;
     border-radius: 10px;
-    width: 200px;
+    width: auto;
+    height: 100px;
+    text-align: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease-in-out;
+}
+
+.color-box.reveal {
+    opacity: 1; /* Revealed when the class is added */
+}
+
+.spacer {
+    height: 1000px; /* For demonstration purposes */
+}
+
+.opacity-control {
+    margin: 20px;
     text-align: center;
 }
 
-#content #main img{ width: 100%; border: 1px solid gray;}
- 
-#content #banner li{
-    border-bottom: 1px solid gray;
-}
-#content #banner li a{
-    display: block;
-    text-align: center;
-}
- 
-footer{padding: 0px 10px;}
-footer img{width: 100%;}
+
+/* 전체 페이지가 가운데로 오도록 
+#page{width: 820px; margin: 0px auto;} */
