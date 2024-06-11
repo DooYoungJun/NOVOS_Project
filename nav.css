@@ -103,6 +103,7 @@ body {
     align-items: center;
 }
 
+/*화면 작아지면 나오는 햄버거 메뉴*/
 @media (max-width: 922px) {
     .navbar{
         justify-content: space-between;

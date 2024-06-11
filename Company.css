@@ -3,69 +3,49 @@ ul{list-style: none;}
 a{text-decoration: none;}
 strong{font-weight: bold;}
 ::after, ::before{box-sizing: border-box;}
-.container{
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+
+h2 {
+    margin-top: 40px; /* 제목 위쪽 간격 */
+    margin-bottom: 10px; /* 제목 아래쪽 간격 */
+    position: relative;
 }
 
-.site-header{
+h2::after {
+    content: '';
+    display: block;
     width: 100%;
-    height: 250px;
-    overflow: visible;
-    z-index: 1000;
-    position: relative;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    background-color: #fff;
+    height: 2px; /* 얇은 줄 */
+    background-color: lightblue; /* 연한 파란색 */
+    margin-top: 10px;
+}
+
+p, .media-text__content, figure {
+    margin-bottom: 30px; /* 문단 간격 추가 */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* 테두리 간격을 없애고 하나로 만듦 */
+    margin-bottom: 20px; /* 테이블 간격 추가 */
+}
+
+table, th, td {
+    border: 1px solid black; /* 검정색 테두리 */
+}
+
+td, th {
+    padding: 10px; /* 테두리 안쪽 여백 */
+    text-align: left; /* 텍스트를 왼쪽 정렬 */
+}
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .header-container{
     width: 100%;
-}
-
-.site-header-logo{
-    text-align: center;
-    font-weight: 700;
-    font-size: 1.5rem;
-    white-space: nowrap;
-    line-height: 1.4em;
-}
-
-.global-nav{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: auto;
-    margin-left: auto;
-}
-
-.global-nav li{
-    float: left;
-    text-align: center;
-    margin: 0;
-    list-style: none;
-    line-height: 1.4;
-    font-size: 12px;
-    position: relative;
-}
-
-.global-nav-name{
-    font-size: 14px;
-    display: block;
-    width: 100%;
-    white-space: nowrap;
-}
-
-.global-nav-description{
-    display: block;
-    overflow: hidden;
-    font-size: 10px;
-    line-height: 14px;
-    opacity: .6;
-    text-align: center;
-    white-space: nowrap;
 }
 
 .page-header {
@@ -99,52 +79,4 @@ page-header-title,h1.page-header-title{
 
 .media-text__media .media-text__content{
     align-self: center;
-}
-
-.media-text__media{
-    grid-column: 1;
-    grid-row: 1;
-    margin: 0;
-}
-
-.media-text__content{
-    direction: ltr;
-    grid-column: 2;
-    grid-row: 1;
-    padding: 0.8%;
-    word-break: break-word;
-}
-
-.heading-plain{
-    position: relative;
-    outline: unset;
-    outline-offset: unset;
-    box-shadow: unset;
-    border-radius: unset;
-    overflow: unset;
-    color: inherit;
-    background-color: transparent;
-    border: none;
-    padding: unset;
-    display: block;
-}
-
-.site-footer{
-    border-top: 1px solid #3461ac;
-    display: block;
-    overflow: hidden;
-    content-visibility: auto;
-    contain-intrinsic-size: 370px;
-}
-
-.site-header::after{
-    content: "";
-    clear: both;
-    display: block;
-}
-
-footer::after{
-    content: "";
-    display: block;
-    clear: both;
 }
