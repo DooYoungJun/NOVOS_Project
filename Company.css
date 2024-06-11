@@ -1,0 +1,150 @@
+*{margin: 0px; padding: 0px;}
+ul{list-style: none;}
+a{text-decoration: none;}
+strong{font-weight: bold;}
+::after, ::before{box-sizing: border-box;}
+.container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.site-header{
+    width: 100%;
+    height: 250px;
+    overflow: visible;
+    z-index: 1000;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+}
+
+.header-container{
+    width: 100%;
+}
+
+.site-header-logo{
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    line-height: 1.4em;
+}
+
+.global-nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: auto;
+    margin-left: auto;
+}
+
+.global-nav li{
+    float: left;
+    text-align: center;
+    margin: 0;
+    list-style: none;
+    line-height: 1.4;
+    font-size: 12px;
+    position: relative;
+}
+
+.global-nav-name{
+    font-size: 14px;
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.global-nav-description{
+    display: block;
+    overflow: hidden;
+    font-size: 10px;
+    line-height: 14px;
+    opacity: .6;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.page-header {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    min-height: 8rem;
+    text-align: center;
+    color: #fff;
+    background-color: #3461ac;
+}
+
+.page-header-inner {
+    position: relative;
+    z-index: 5;
+    margin: 1.5em auto;
+}
+
+page-header-title,h1.page-header-title{
+    font-size:2rem;
+    font-weight:700;
+    line-height: 1.4rem;
+    align-content: center;
+    justify-content: center;
+    margin:0
+}
+
+.media-text__media .media-text__content{
+    align-self: center;
+}
+
+.media-text__media{
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0;
+}
+
+.media-text__content{
+    direction: ltr;
+    grid-column: 2;
+    grid-row: 1;
+    padding: 0.8%;
+    word-break: break-word;
+}
+
+.heading-plain{
+    position: relative;
+    outline: unset;
+    outline-offset: unset;
+    box-shadow: unset;
+    border-radius: unset;
+    overflow: unset;
+    color: inherit;
+    background-color: transparent;
+    border: none;
+    padding: unset;
+    display: block;
+}
+
+.site-footer{
+    border-top: 1px solid #3461ac;
+    display: block;
+    overflow: hidden;
+    content-visibility: auto;
+    contain-intrinsic-size: 370px;
+}
+
+.site-header::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+footer::after{
+    content: "";
+    display: block;
+    clear: both;
+}
