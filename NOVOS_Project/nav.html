@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>nav bar</title>
+    <link rel="stylesheet" href="nav.css">
+</head>
+<body>
+    <!--왼쪽 위에 햄버거 메뉴 삼 선-->
+    <nav class="navbar">
+        <div class="navbar-toggle" id="navbar-toggle">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <!--NOVO.S 로고-->
+        <div class="navbar-logo">
+            <img src="KakaoTalk_20240610_094557322.png" alt="Logo">
+        </div>
+        <!--실제 메뉴들(다른 HTML이랑 연동해야함)-->
+        <ul class="navbar-menu">
+            <li class="navbar-item active">
+                <a href="#">ホーム</a>
+                <span class="navbar-subtext">Home</span>
+            </li>
+            <li class="navbar-item">
+                <a href="#">サービス</a>
+                <span class="navbar-subtext">Service</span>
+            </li>
+            <li class="navbar-item">
+                <a href="#">会社案内</a>
+                <span class="navbar-subtext">Company</span>
+            </li>
+            <li class="navbar-item">
+                <a href="#">採用情報</a>
+                <span class="navbar-subtext">Recruit</span>
+            </li>
+            <li class="navbar-item">
+                <a href="#">お問い合わせ</a>
+                <span class="navbar-subtext">Contact</span>
+            </li>
+        </ul>
+    </nav>
+    <!--JavaScript 불러오기-->
+    <script src="nav.js"></script>
+</body>
+</html>

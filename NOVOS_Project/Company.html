@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="uft-8">
+        <!-- css -->
+        <link rel="stylesheet" href="./NO_service_M.css" media="(max-width:600px)">
+        <link rel="stylesheet" href="./NO_service.css" media="(min-width:600px)">
+        <link rel="stylesheet" href="Company.css">
+        <title>会社案内 | 株式会社NOVO.S</title>
+
+        <!-- footer-->
+    <script>document.addEventListener("DOMContentLoaded", function() {
+        fetch('footer.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('footer').innerHTML = data;
+          });
+      });</script>    
+
+      <!-- navbar -->
+    <script>document.addEventListener("DOMContentLoaded", function() {
+        fetch('nav.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+            document.getElementById('navbar-toggle').addEventListener('click', function() {
+            var menu = document.querySelector('.navbar-menu');
+            menu.classList.toggle('active');
+            var toggle = document.getElementById('navbar-toggle');
+            toggle.classList.toggle('change');
+            var logo = document.querySelector('.navbar-logo');
+            logo.classList.toggle('hidden');
+            });
+          });
+      });</script>
+    </head>
+    <body>
+        <!--여기가 네비게이션 들어갈 부분-->
+        <div id="navbar"></div>
+        <!-- 홈페이지 헤더 큰 파란색 창-->
+        <div class="page-header">
+            <div class="page-header-inner container">
+                <h1 clas="page-header-title">会社案内</h1>
+            </div>
+        </div>
+        <!--메인 내용-->
+        <div class="entry-body container">
+            <div style="grid-template-columns: 30% auto">
+                <div class="media-text__content">
+                    <h2>会社案内 </h2>
+                    <p>お客様に満足される品質の高いシステム開発の
+                        提供に努め、お客様拡大を実現し、お客様の
+                        信頼に応えます。
+                        協力会社と心のかよったパートナーとしてお互いに
+                        協力し、相互の発展を図って優れた価値と高品質を有するシステムを構築、
+                        質の高い人材により企業のインテリジェンスを形成、人間尊重企業を目指します。
+                        人材とその育成が重要と考えて経営に努めます。</p>
+                </div>
+            </div>
+            <h2>経営理念</h2>
+            <p style="font-size: 20px;">環境の変化を先取りし、進化し成長する。
+                                        社員の能力発現と開発への挑戦を支援し、
+                                        顧客と共に、常に変革と成長をしていき、
+                                        効率的で透明性の高い経営に努めます。</p>
+            <h2>人材像</h2>
+            <figure>
+                <table>
+                    <tbody>
+                        <tr><td>人材</td><td>顧客</td><td>信頼</td></tr>
+                        <tr><td>技術的なスキル、高い目的意識を持った人材を育てることで豊かな社会への発展に貢献します。</td>
+                            <td>顧客に利便性の高いシステムや製品を提供します</td>
+                            <td>働く人の力を引出し、繋ぎ、大切にしながら効率と生産性を高めることで顧客に利便性の高いシステムや製品を提供し、サービスの質を上げる事で確かな信頼関係を築きます。</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </figure>
+            <h2>会社概要</h2>
+            <figure>
+                <table>
+                    <tbody>
+                        <tr><td>会社名</td><td>株式会社NOVO.S</td></tr>
+                        <tr><td>連絡先</td><td>03-6681-7292</td></tr>
+                        <tr><td>設立</td><td>2020年4月8日</td></tr>
+                        <tr><td>代表取締役</td><td>文 敞煥</td></tr>
+                        <tr><td>所在地</td><td>〒160-0004<br>
+                                               東京都新宿区四谷2丁目8番地 コーポクローバ瀬尾501号</td></tr>
+                        <tr><td>重要取引先</td><td>株式会社ZOOMSYSTEM、株式会社KS情報SYSTEM<br>
+                                                  株式会社ITCEN-JAPAN、株式会社亜細亜情報システム<br>
+                                                  株式会社J_TECH、日本ティーマックスソフト株式会社<br>
+                                                  株式会社NURINUBI、株式会社AIGOSS</td></tr>
+                    </tbody>
+                </table>
+            </figure>
+        </div>
+        <!--Footer 만든거 들어가야 할 부분-->
+        <div id="footer"></div>
+    </body>
+</html>
