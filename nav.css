@@ -30,10 +30,9 @@ body {
 
 .navbar-logo {
     margin-right: auto;
-    top: 20px; /* 햄버거 아이콘과 동일한 위치 */
-    left: 80px; /* 햄버거 아이콘 크기만큼 오른쪽으로 이동 */
-    z-index: 1000; /* 다른 요소 위로 표시 */
-
+    top: 20px;
+    left: 80px;
+    z-index: 1000;
 }
 
 .navbar-logo img {
@@ -56,6 +55,7 @@ body {
     text-decoration: none;
     padding: 8px 12px;
     display: block;
+    line-height: 1.2;
 }
 
 .navbar-subtext {
@@ -63,29 +63,27 @@ body {
     font-size: 0.8em;
     color: #ccc;
     transition: color 0.3s;
-    position: relative;
 }
 
-.navbar-subtext::after {
+.navbar-item a:hover .navbar-subtext,
+.navbar-item.active a .navbar-subtext {
+    color: black;
+}
+
+.navbar-item a::after {
     content: '';
     display: block;
     width: 0;
     height: 1px;
     background-color: #ADD8E6;
     transition: width 0.3s;
-    position: absolute;
-    left: 0;
-    bottom: -2px;
+    position: relative;
+    top: 2px;
 }
 
-.navbar-item a:hover ~ .navbar-subtext::after,
-.navbar-item.active .navbar-subtext::after {
+.navbar-item a:hover::after,
+.navbar-item.active a::after {
     width: 100%;
-}
-
-.navbar-item:hover .navbar-subtext,
-.navbar-item.active .navbar-subtext {
-    color: black;
 }
 
 .navbar-toggle {
@@ -104,7 +102,7 @@ body {
 }
 
 @media (max-width: 922px) {
-    .navbar{
+    .navbar {
         justify-content: space-between;
     }
 
@@ -114,7 +112,7 @@ body {
         transform: translateX(-50%);
     }
 
-    .navbar-logo.hidden{
+    .navbar-logo.hidden {
         display: none;
     }
 
@@ -124,11 +122,18 @@ body {
         width: 100%;
         text-align: left;
         background-color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
     }
 
     .navbar-menu.active {
         display: flex;
-        animation: slideDown 0.5s ease-in-out; /* 애니메이션 적용 */
+        animation: slideDown 0.5s ease-in-out;
     }
 
     .navbar-item {
@@ -136,8 +141,8 @@ body {
     }
 
     .navbar-toggle {
-        width: 40px; /* 정사각형을 위한 너비 */
-        height: 40px; /* 정사각형을 위한 높이 */
+        width: 40px;
+        height: 40px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -145,12 +150,12 @@ body {
     }
 
     .navbar-toggle::before {
-        content: '\2630'; /* 햄버거 아이콘 */
+        content: '\2630';
         font-size: 24px;
     }
 
     .navbar-toggle.active::before {
-        content: '\2715'; /* X 아이콘 */
+        content: '\2715';
     }
 
     .navbar-menu {
@@ -170,20 +175,30 @@ body {
     }
 
     .navbar-subtext {
-        display: none;
+        display: block;
+        font-size: 0.8em;
+        color: #ccc;
+        transition: color 0.3s;
     }
 
-    .navbar-subtext::after {
-        display: none;
+    .navbar-item a:hover .navbar-subtext,
+    .navbar-item.active a .navbar-subtext {
+        color: black;
     }
 
-    .navbar-item a:hover ~ .navbar-subtext::after,
-    .navbar-item.active .navbar-subtext::after {
+    .navbar-item a::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 1px;
+        background-color: #ADD8E6;
+        transition: width 0.3s;
+        position: relative;
+        top: 2px;
+    }
+
+    .navbar-item a:hover::after,
+    .navbar-item.active a::after {
         width: 100%;
-    }
-
-    .navbar-item:hover .navbar-subtext,
-    .navbar-item.active .navbar-subtext {
-        color: #fff;
     }
 }

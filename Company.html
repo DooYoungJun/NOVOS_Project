@@ -3,8 +3,6 @@
     <head>
         <meta charset="uft-8">
         <!-- css -->
-        <link rel="stylesheet" href="./NO_service_M.css" media="(max-width:600px)">
-        <link rel="stylesheet" href="./NO_service.css" media="(min-width:600px)">
         <link rel="stylesheet" href="Company.css">
         <title>会社案内 | 株式会社NOVO.S</title>
 
@@ -31,6 +29,19 @@
             var logo = document.querySelector('.navbar-logo');
             logo.classList.toggle('hidden');
             });
+
+            // 현재 페이지 URL 가져오기
+            var currentPage = window.location.pathname.split("/").pop();
+
+            // 모든 네비게이션 항목 가져오기
+            var navItems = document.querySelectorAll('.navbar-item');
+
+            // 현재 페이지와 일치하는 항목에 active 클래스 추가
+            navItems.forEach(function(item) {
+                if (item.getAttribute('data-link') === currentPage) {
+                    item.classList.add('active');
+                }
+            });
           });
       });</script>
     </head>
@@ -48,7 +59,7 @@
             <div style="grid-template-columns: 30% auto">
                 <div class="media-text__content">
                     <h2>会社案内 </h2>
-                    <p>お客様に満足される品質の高いシステム開発の
+                    <p style="font-size: 20px;">お客様に満足される品質の高いシステム開発の
                         提供に努め、お客様拡大を実現し、お客様の
                         信頼に応えます。
                         協力会社と心のかよったパートナーとしてお互いに
@@ -57,15 +68,17 @@
                         人材とその育成が重要と考えて経営に努めます。</p>
                 </div>
             </div>
+            <hr class="body-line container">
             <h2>経営理念</h2>
             <p style="font-size: 20px;">環境の変化を先取りし、進化し成長する。
                                         社員の能力発現と開発への挑戦を支援し、
                                         顧客と共に、常に変革と成長をしていき、
                                         効率的で透明性の高い経営に努めます。</p>
+            <hr class="body-line container">
             <h2>人材像</h2>
             <figure>
                 <table>
-                    <tbody>
+                    <tbody style="font-size: 20px;">
                         <tr><td>人材</td><td>顧客</td><td>信頼</td></tr>
                         <tr><td>技術的なスキル、高い目的意識を持った人材を育てることで豊かな社会への発展に貢献します。</td>
                             <td>顧客に利便性の高いシステムや製品を提供します</td>
@@ -74,10 +87,11 @@
                     </tbody>
                 </table>
             </figure>
+            <hr class="body-line container">
             <h2>会社概要</h2>
             <figure>
                 <table>
-                    <tbody>
+                    <tbody style="font-size: 20px;">
                         <tr><td>会社名</td><td>株式会社NOVO.S</td></tr>
                         <tr><td>連絡先</td><td>03-6681-7292</td></tr>
                         <tr><td>設立</td><td>2020年4月8日</td></tr>
@@ -92,6 +106,8 @@
                 </table>
             </figure>
         </div>
+        <!--메인 내용과 푸터 사이에 얇은 회색 선-->
+        <hr class="divider">
         <!--Footer 만든거 들어가야 할 부분-->
         <div id="footer"></div>
     </body>
