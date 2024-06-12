@@ -26,15 +26,14 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    transition: justify-content 0.3s, left 0.3s;
 }
 
 .navbar-logo {
     margin-right: auto;
-    top: 20px;
-    left: 80px;
-    z-index: 1000;
-    transition: left 0.3s, transform 0.3s;
+    top: 20px; /* 햄버거 아이콘과 동일한 위치 */
+    left: 80px; /* 햄버거 아이콘 크기만큼 오른쪽으로 이동 */
+    z-index: 1000; /* 다른 요소 위로 표시 */
+
 }
 
 .navbar-logo img {
@@ -102,15 +101,6 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-}
-
-.navbar.scrolled {
-    justify-content: center;
-}
-
-.navbar.scrolled .navbar-logo {
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 @media (max-width: 922px) {
