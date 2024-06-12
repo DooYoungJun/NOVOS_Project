@@ -1,12 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // 네비게이션 토글 기능
-    document.getElementById('navbar-toggle').addEventListener('click', function() {
-        var menu = document.querySelector('.navbar-menu');
+    var navbarToggle = document.getElementById('navbar-toggle');
+    var menu = document.querySelector('.navbar-menu');
+    var navbar = document.getElementById('navbar');
+
+    navbarToggle.addEventListener('click', function() {
         menu.classList.toggle('active');
-        var toggle = document.getElementById('navbar-toggle');
-        toggle.classList.toggle('change');
+        navbarToggle.classList.toggle('change');
         var logo = document.querySelector('.navbar-logo');
         logo.classList.toggle('hidden');
+    });
+
+    // 스크롤 시 따라오는 네비게이션 바(왜인지 안됨)
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 0) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
     });
 
     // 현재 페이지 URL 가져오기
