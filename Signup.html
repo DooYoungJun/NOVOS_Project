@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>회원가입</title>
+    <link rel="stylesheet" href="./Signup.css">
+</head>
+<body>
+    <form id="registerForm">
+        <input type="text" name="username" placeholder="사용자 이름" required>
+        <input type="email" name="email" placeholder="이메일" required>
+        <input type="password" name="password" placeholder="비밀번호" required>
+        <button type="submit">회원가입</button>
+    </form>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const formData = new FormData(event.target);
+
+            fetch('http://localhost:3000/register', {
+                method: 'POST',
+                body: new URLSearchParams(formData)
+            })
+            .then(response => response.text())
+            .then(message => {
+                alert(message); // 서버에서 받은 메시지를 알림으로 표시
+                if (message === "회원가입이 성공적으로 완료되었습니다.") {
+                    // 회원가입이 성공하면 index.html로 이동
+                    window.location.href = 'index.html';
+                }
+            })
+            .catch(error => {
+                console.error('회원가입 중 에러가 발생했습니다.', error);
+            });
+        });
+    </script>
+</body>
+</html>
