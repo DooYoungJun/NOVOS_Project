@@ -6,8 +6,36 @@
     <link rel="stylesheet" href="./footer.css">
     <link rel="stylesheet" href="./picture_effect.css">
     <title>Document</title>
+
+            <!-- navbar -->
+            <script>document.addEventListener("DOMContentLoaded", function() {
+                fetch('nav.html')
+                  .then(response => response.text())
+                  .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+                    document.getElementById('navbar-toggle').addEventListener('click', function() {
+                    var menu = document.querySelector('.navbar-menu');
+                    menu.classList.toggle('active');
+                    var toggle = document.getElementById('navbar-toggle');
+                    toggle.classList.toggle('change');
+                    var logo = document.querySelector('.navbar-logo');
+                    logo.classList.toggle('hidden');
+                    });
+                  });
+                });
+            </script>
 </head>
 <body>
+
+    <!--여기가 네비게이션 들어갈 부분-->
+        <div id="navbar"></div>
+    <!-- 홈페이지 헤더 큰 파란색 창-->
+        <div class="page-header">
+            <div class="page-header-inner container">
+                <h1 clas="page-header-title">会社案内</h1>
+            </div>
+        </div>
+    
      
     <!-- 사진 효과 -->
     <div class="color-box"></div>

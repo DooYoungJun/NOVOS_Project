@@ -9,27 +9,35 @@
     <link rel="stylesheet" href="./Company.css">
     <link rel="stylesheet" href="./footer.css">
     <link rel="stylesheet" href="./picture_effect.css">
+
+        <!-- navbar -->
+        <script>document.addEventListener("DOMContentLoaded", function() {
+            fetch('nav.html')
+              .then(response => response.text())
+              .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+                document.getElementById('navbar-toggle').addEventListener('click', function() {
+                var menu = document.querySelector('.navbar-menu');
+                menu.classList.toggle('active');
+                var toggle = document.getElementById('navbar-toggle');
+                toggle.classList.toggle('change');
+                var logo = document.querySelector('.navbar-logo');
+                logo.classList.toggle('hidden');
+                });
+              });
+            });
+        </script>
+
 </head>
 <body>
-    <!-- 네비게이션 -->
-    <header id="site-header">
-        <div class="header-container container">
-            <div id="site-header-logo">
-                <a href="#">
-                    <img src="meishi-1.jpg" width="300px" height="70px" alt="株式会社NOVO.S">
-                </a> 
-            </div> <!-- #site-header-logo -->
-            <nav class="global-nav">
-                <ul>
-                    <li><a href="#"><strong class="global-nav-name">ホーム</strong><span class="global-nav-description">HOME</span></a></li>
-                    <li><a href="#"><strong class="global-nav-name">サービス</strong><span class="global-nav-description">Service</span></a></li>
-                    <li><a href="#"><strong class="global-nav-name">会社案内</strong><span class="global-nav-description">Company</span></a></li>
-                    <li><a href="#"><strong class="global-nav-name">採用情報</strong><span class="global-nav-description">Recruit</span></a></li>
-                    <li><a href="#"><strong class="global-nav-name">お問い合わせ</strong><span class="global-nav-description">Contact</span></a></li>
-                </ul>
-            </nav> <!-- .global-nav -->
-        </div> <!-- .header-container -->
-    </header> <!-- #site-header -->
+        <!--여기가 네비게이션 들어갈 부분-->
+        <div id="navbar"></div>
+        <!-- 홈페이지 헤더 큰 파란색 창-->
+        <div class="page-header">
+            <div class="page-header-inner container">
+                <h1 clas="page-header-title">会社案内</h1>
+            </div>
+        </div>
 
     <!-- 본문 -->
      
