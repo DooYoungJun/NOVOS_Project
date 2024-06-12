@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./footer.css">
     <link rel="stylesheet" href="./picture_effect.css">
+    <link rel="stylesheet" href="Contact.css">
     <title>Document</title>
 
             <!-- navbar -->
@@ -22,17 +23,69 @@
                     logo.classList.toggle('hidden');
                     });
                   });
+
+                    // 현재 페이지 URL 가져오기
+                    var currentPage = window.location.pathname.split("/").pop();
+
+                    // 모든 네비게이션 항목 가져오기
+                    var navItems = document.querySelectorAll('.navbar-item');
+
+                    // 현재 페이지와 일치하는 항목에 active 클래스 추가
+                    navItems.forEach(function(item) {
+                        if (item.getAttribute('data-link') === currentPage) {
+                            item.classList.add('active');
+                        }
+                    });
                 });
             </script>
 </head>
 <body>
-         
+    <!--여기가 네비게이션 들어갈 부분-->
+    <div id="navbar"></div>
+    <!-- 홈페이지 헤더 큰 파란색 창-->
+        <div class="page-header">
+            <div class="page-header-inner container">
+                <h1 clas="page-header-title"> お問い合わせ </h1>
+            </div>
+        </div>
+
+    <!--메인 내용-->
+    <div class="entry-body container">
+        <br><br>
+        <p>ご質問などありましたら、以下お問い合わせフォームよりお気軽にご連絡ください。</p>
+        <br>
+        <table>
+            <tr><td>メールアドレス（必須）</td></tr>
+            <tr><td><input type="text" class="text" placeholder="xxx@xxxxx.xxx"><div class="placeholder">必須項目に記入もれがあります。</div></td></tr>
+            <tr><td>会社名(法人の方のみ)</td></tr>
+            <tr><td><input type="text" class="text" placeholder="株式会社OOOO"></td></tr>
+            <tr><td>会社名(フリガナ)</td></tr>
+            <tr><td><input type="text" class="text" placeholder="カブシキカイシャOOOO"></td></tr>
+            <tr><td>名前(法人の場合は担当者)（必須）</td></tr>
+            <tr><td><input type="text" class="text" placeholder="山田　太郎"><div class="placeholder">必須項目に記入もれがあります。</div></td></tr>
+            <tr><td>名前(フリガナ)（必須）</td></tr>
+            <tr><td><input type="text" class="text" placeholder="ヤマダ　タロウ"><div class="placeholder">必須項目に記入もれがあります。</div></td></tr>
+            <tr><td>電話番号（必須）</td></tr>
+            <tr><td><input type="text" class="text" placeholder="000-000-0000"><div class="placeholder">必須項目に記入もれがあります。</div></td></tr>
+            <tr><td>お問い合わせ内容（必須）</td></tr>
+            <tr><td><textarea rows="4" cols="50"></textarea><div class="placeholder">必須項目に記入もれがあります。</div></td></tr>
+            </table>
+            <p>お問い合わせの際には「<a href="index.html">個人情報の取り扱いについて</a>」をお読みいただき、予め同意の上、お問い合わせください。</p>
+            <p><input type="checkbox">個人情報の取り扱いについて同意する（必須）</p>
+            <br>
+            <p>確認画面は表示されません。送信ボタンを押す前に、入力内容に間違いがないかご確認ください。</p>
+            <p><input type="checkbox">確認した（必須）</p>
+            <input type="submit" value="送信" class="btn">
+            <br><br>
+    </div>
+
     <!-- 사진 효과 -->
     <div class="color-box"></div>
     <!-- input type="range" id="opacity-slider" min="0" max="1" step="0.01" value="1" -->
 
     <!-- 외부 JavaScript 파일 포함 -->
         <script src="picture_effect.js"></script>
+        <script src="Contact.js"></script>
     
     <!-- Footer -->
         <footer id="footer-placeholder">
