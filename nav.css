@@ -31,17 +31,10 @@ body {
 
 .navbar-logo {
     margin-right: auto;
-<<<<<<< HEAD
     top: 20px;
     left: 80px;
     z-index: 1000;
     transition: left 0.3s, transform 0.3s;
-=======
-    top: 20px; /* 햄버거 아이콘과 동일한 위치 */
-    left: 80px; /* 햄버거 아이콘 크기만큼 오른쪽으로 이동 */
-    z-index: 1000; /* 다른 요소 위로 표시 */
-
->>>>>>> 825a21083d5b04f0a2422ed03ee11871c144123a
 }
 
 .navbar-logo img {
