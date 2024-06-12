@@ -1,14 +1,20 @@
 document.addEventListener('DOMContentLoaded', function() {
+<<<<<<< HEAD
     var navbarToggle = document.getElementById('navbar-toggle');
     var menu = document.querySelector('.navbar-menu');
     var navbar = document.getElementById('navbar');
 
     navbarToggle.addEventListener('click', function() {
+=======
+    document.getElementById('navbar-toggle').addEventListener('click', function() {
+        var menu = document.querySelector('.navbar-menu');
+>>>>>>> 825a21083d5b04f0a2422ed03ee11871c144123a
         menu.classList.toggle('active');
         navbarToggle.classList.toggle('change');
         var logo = document.querySelector('.navbar-logo');
         logo.classList.toggle('hidden');
     });
+<<<<<<< HEAD
 
     // 스크롤 시 따라오는 네비게이션 바(왜인지 안됨)
     window.addEventListener('scroll', function() {
@@ -31,4 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
             item.classList.add('active');
         }
     });
+=======
+>>>>>>> 825a21083d5b04f0a2422ed03ee11871c144123a
 });
