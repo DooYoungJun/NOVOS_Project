@@ -1,0 +1,23 @@
+        /* 사진효과 */
+        .color-box {
+            background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+                        url('NOOVS\ mainLogo.png'); /* 여기에 원하는 이미지 경로를 넣으세요 */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+            border-radius: 10px;
+            width: auto;
+            height: 300px; /* 높이를 더 크게 설정 */
+            text-align: center;
+            opacity: 0; /* 초기 상태에서는 숨김 */
+            transition: opacity 1s ease-in-out;
+        }
+
+        .color-box.reveal {
+            opacity: 1; /* 클래스가 추가되면 나타남 */
+        }
+
+        .spacer {
+            height: 1000px; /* 데모를 위해 추가한 공간 */
+        }

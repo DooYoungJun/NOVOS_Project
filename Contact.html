@@ -3,9 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./footer.css">
+    <link rel="stylesheet" href="./picture_effect.css">
     <title>Document</title>
 </head>
 <body>
+         
+    <!-- 사진 효과 -->
+    <div class="color-box"></div>
+    <!-- input type="range" id="opacity-slider" min="0" max="1" step="0.01" value="1" -->
+
+    <!-- 외부 JavaScript 파일 포함 -->
+        <script src="picture_effect.js"></script>
     
+    <!-- Footer -->
+        <footer id="footer-placeholder">
+    <!-- footer.html 파일을 불러와서 콘텐츠를 동적으로 추가할 것입니다. -->
+        </footer>
+    <!-- #footer-placeholder -->
+
+    <!-- 스크립트 -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // footer.html 파일을 불러와서 #footer-placeholder에 삽입하는 스크립트
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+
+                    // 동적으로 이미지 추가하는 코드
+                    var imageUrl = './imgs_company/dynamic_image.png'; // 불러올 이미지 경로
+                    var img = document.createElement('img');
+                    img.src = imageUrl;
+                    img.alt = 'Dynamic Image';
+                    document.getElementById('dynamicImage').appendChild(img);
+                });
+        });
+    </script>
 </body>
 </html>

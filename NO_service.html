@@ -1,92 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>NOVOS | </title>
     <!-- 반응형 웹 만들기 -->
-    <!--link rel="stylesheet" href="./NO_service_M.css" media="(max-width:600px)"-->
+    <!-- <link rel="stylesheet" href="./NO_service_M.css" media="(max-width:600px)"> -->
     <link rel="stylesheet" href="./NO_service.css">
+    <link rel="stylesheet" href="./Company.css">
     <link rel="stylesheet" href="./footer.css">
-    <link rel="stylesheet" href="Company.css">
+    <link rel="stylesheet" href="./picture_effect.css">
 </head>
 <body>
-     <!--여기가 네비게이션 들어갈 부분-->
-     <header id="site-header">
-        <div id="header-container" class="header-container container">
+    <!-- 네비게이션 -->
+    <header id="site-header">
+        <div class="header-container container">
             <div id="site-header-logo">
-               <a href="">
-                <span><img src="meishi-1.jpg" width="300px" height="70px" alt="株式会社NOVO.S"></span>
-               </a> 
-            </div> <!-- 홈페이지 왼쪽 위 로고 -->
+                <a href="#">
+                    <img src="meishi-1.jpg" width="300px" height="70px" alt="株式会社NOVO.S">
+                </a> 
+            </div> <!-- #site-header-logo -->
             <nav class="global-nav">
                 <ul>
-                    <li><a href=""><strong class="global-nav-name">
-                        ホーム
-                    </strong><span class="global-nav-description">HOME</span></a></li>
-                    <li><a href=""><strong class="global-nav-name">
-                        サービス
-                    </strong><span class="global-nav-description">Service</span></a></li>
-                    <li><a href=""><strong class="global-nav-name">
-                        会社案内
-                    </strong><span class="global-nav-description">Company</span></a></li>
-                    <li><a href=""><strong class="global-nav-name">
-                        採用情報
-                    </strong><span class="global-nav-description">Recruit</span></a></li>
-                    <li><a href=""><strong class="global-nav-name">
-                        お問い合わせ
-                    </strong><span class="global-nav-description">Contact</span></a></li>
+                    <li><a href="#"><strong class="global-nav-name">ホーム</strong><span class="global-nav-description">HOME</span></a></li>
+                    <li><a href="#"><strong class="global-nav-name">サービス</strong><span class="global-nav-description">Service</span></a></li>
+                    <li><a href="#"><strong class="global-nav-name">会社案内</strong><span class="global-nav-description">Company</span></a></li>
+                    <li><a href="#"><strong class="global-nav-name">採用情報</strong><span class="global-nav-description">Recruit</span></a></li>
+                    <li><a href="#"><strong class="global-nav-name">お問い合わせ</strong><span class="global-nav-description">Contact</span></a></li>
                 </ul>
-            </nav> <!-- 홈페이지 오른쪽 위 메뉴 -->
-        </div>
-    </header>
+            </nav> <!-- .global-nav -->
+        </div> <!-- .header-container -->
+    </header> <!-- #site-header -->
 
-        <!-- 본문 -->
-            
-        <!--footer 이게 진짜-->
-        <footer id="footer-placeholder">
-        <!--footer.html 파일을 불러와서 콘텐츠를 동적으로 추가할 것입니다. -->
-        </footer>
+    <!-- 본문 -->
+     
+    <!-- 사진 효과 -->
+        <div class="color-box"></div>
+    <!-- input type="range" id="opacity-slider" min="0" max="1" step="0.01" value="1" -->
 
-        <!--footer인데 어디에 쓰는지는 모름-->
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                // footer.html 파일을 불러와서 #footer-placeholder에 삽입하는 스크립트
-                fetch('footer.html')
-                    .then(response => response.text())
-                    .then(data => {
-                        document.getElementById('footer-placeholder').innerHTML = data;
+    <!-- 외부 JavaScript 파일 포함 -->
+        <script src="picture_effect.js"></script>
     
-                        // 동적으로 이미지 추가하는 코드
-                        var imageUrl = './imgs_company/dynamic_image.png'; // 불러올 이미지 경로
-                        var img = document.createElement('img');
-                        img.src = imageUrl;
-                        img.alt = 'Dynamic Image';
-                        document.getElementById('dynamicImage').appendChild(img);
-                    });
-            });
-        </script>
+    <!-- Footer -->
+        <footer id="footer-placeholder">
+    <!-- footer.html 파일을 불러와서 콘텐츠를 동적으로 추가할 것입니다. -->
+        </footer>
+    <!-- #footer-placeholder -->
 
-    <!--사진 효과 넣기-->
+    <!-- 스크립트 -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const observer = new IntersectionObserver(function (entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('reveal');
-                        observer.unobserve(entry.target); // Unobserve after revealing
-                    }
+        document.addEventListener("DOMContentLoaded", function() {
+            // footer.html 파일을 불러와서 #footer-placeholder에 삽입하는 스크립트
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+
+                    // 동적으로 이미지 추가하는 코드
+                    var imageUrl = './imgs_company/dynamic_image.png'; // 불러올 이미지 경로
+                    var img = document.createElement('img');
+                    img.src = imageUrl;
+                    img.alt = 'Dynamic Image';
+                    document.getElementById('dynamicImage').appendChild(img);
                 });
-            });
-
-            const target = document.querySelector('.color-box');
-            observer.observe(target);
-
-            const opacitySlider = document.getElementById('opacity-slider');
-            opacitySlider.addEventListener('input', function () {
-                target.style.opacity = this.value;
-            });
         });
     </script>
-
 </body>
 </html>
