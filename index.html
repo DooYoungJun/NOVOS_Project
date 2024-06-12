@@ -7,6 +7,7 @@
     <!-- css -->
     <link rel="stylesheet" href="./NO_service_M.css" media="(max-width:600px)">
     <link rel="stylesheet" href="./NO_service.css" media="(min-width:600px)">
+    <link rel="stylesheet" href="index.css">
 
     <!-- footer-->
     <script>document.addEventListener("DOMContentLoaded", function() {
@@ -16,8 +17,32 @@
             document.getElementById('footer').innerHTML = data;
           });
       });</script>    
+
+      <!-- navbar -->
+    <script>document.addEventListener("DOMContentLoaded", function() {
+      fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar').innerHTML = data;
+          document.getElementById('navbar-toggle').addEventListener('click', function() {
+          var menu = document.querySelector('.navbar-menu');
+          menu.classList.toggle('active');
+          var toggle = document.getElementById('navbar-toggle');
+          toggle.classList.toggle('change');
+          var logo = document.querySelector('.navbar-logo');
+          logo.classList.toggle('hidden');
+          });
+        });
+      });
+      </script>
 </head>
 <body>
+  <div id="navbar"></div>
+
+  <div class="image-container">
+    <img src="NOOVS mainLogo.png" alt="Example Image">
+    <div class="text-overlay">이미지 위에 쓰여진 글씨</div>
+</div>
     <div id="footer"></div>
 </body>
 </html>
