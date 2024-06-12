@@ -7,17 +7,4 @@ document.addEventListener('DOMContentLoaded', function() {
         var logo = document.querySelector('.navbar-logo');
         logo.classList.toggle('hidden');
     });
-
-    // 현재 페이지 URL 가져오기
-    var currentPage = window.location.pathname.split("/").pop();
-
-    // 모든 네비게이션 항목 가져오기
-    var navItems = document.querySelectorAll('.navbar-item');
-
-    // 현재 페이지와 일치하는 항목에 active 클래스 추가
-    navItems.forEach(function(item) {
-        if (item.getAttribute('data-link') === currentPage) {
-            item.classList.add('active');
-        }
-    });
 });

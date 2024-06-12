@@ -1,0 +1,9 @@
+a.small-link {
+    color: black; /* 텍스트 색상을 검은색으로 설정 */
+    text-decoration: none; /* 밑줄 제거 */
+    margin-left: 10px; /* 왼쪽 여백을 10px로 설정 */
+}
+
+a.small-link:hover {
+    color: darkblue; /* 마우스를 올리면 텍스트 색상을 어두운 파란색으로 변경 */
+}
