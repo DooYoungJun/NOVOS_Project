@@ -1,26 +1,38 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="login.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    />
     <title>로그인</title>
-    <link rel="stylesheet" href="./Login.css">
-</head>
-<body>
-    <div class="login-container">
-        <h2>로그인</h2>
-        <form action="/login" method="post">
-            <div>
-                <label for="username">사용자 이름:</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div>
-                <label for="password">비밀번호:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button type="submit">로그인</button>
-        </form>
-        <div class="signup-link">
-            <p>아직 계정이 없으신가요? <a href="Signup.html">회원가입</a></p>
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>Login</h2>
+      <form id="login-form">
+        <div class="login_input">
+          <input type="text" id="username" name="username" placeholder="ID" />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="PASSWORD"
+          />
         </div>
+        <div class="submit_button">
+          <button type="submit">Login</button>
+        </div>
+      </form>
+      <div class="signup_link">
+        <p>계정이 없으신가요? <a href="Signup.html">회원가입</a></p>
+      </div>
     </div>
-</body>
+
+    <script src="login.js"></script> <!-- JavaScript 파일 링크 -->
+  </body>
 </html>

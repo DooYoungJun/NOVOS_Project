@@ -1,20 +1,26 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    background-color: #f2f2f2;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
 }
 
-.container {
+.login-container {
     background: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #333;
 }
 
 form {
@@ -28,7 +34,8 @@ input {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; /* 입력 필드의 패딩과 테두리를 포함한 전체 너비로 설정 */
+    box-sizing: border-box;
+    font-size: 14px;
 }
 
 button {
@@ -40,9 +47,23 @@ button {
     color: #fff;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* 배경색 변화에 애니메이션 효과 추가 */
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
     background: #218838;
+}
+
+.signup-link {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.signup-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
 }
