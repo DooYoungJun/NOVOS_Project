@@ -12,14 +12,6 @@ const users = [
 
 app.use(bodyParser.json());
 
-// CORS 설정 (클라이언트와 서버가 다른 호스트 또는 포트에서 실행 중일 경우 필요)
-app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-    next();
-});
-
 // 로그인 라우터 설정
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
