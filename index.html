@@ -1,10 +1,10 @@
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NOVOS | HOME</title>
 
-    <script src="weather.js"></script>
+    <script src="weather.js" defer></script>
 
     <!-- css -->
     <link rel="stylesheet" href="./NO_service.css" media="(min-width:600px)">
@@ -43,9 +43,9 @@
 <body>
   <div id="navbar"></div>
   <br><br>
-  <h2 id="locationNameTag">오늘의 날씨</h2>
+  <h2 id="location-name-tag">오늘의 날씨</h2>
   <div class="image-container">
-    <img src="images/Clear.jpg" alt="Example Image">
+    <img id="weather-image" src="images/Clear.jpg" alt="weather Image">
     <div class="text-overlay"></div>
 </div>
     <div id="footer"></div>

@@ -9,26 +9,28 @@ const weatherDataActive = function ({ location, weather }) {
         'Thunderstorm'
     ];
     weather = weatherMainList.includes(weather) ? weather : 'Fog';
-    const locationNameTag = document.querySelector(`#location-name-tag`)
+    const locationNameTag = document.querySelector('#location-name-tag');
     locationNameTag.textContent = location;
-    document.body.style.backgroundImage = `url('./images/%{weather}.jpg')`
+    const weatherImage = document.querySelector('#weather-image');
+    weatherImage.src = `images/${weather}.jpg`;
 }
 
 const weatherSearch = function ({ latitude, longitude }) {
     fetch(
     (`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=f216c486a139af9d9285e363eef14bfd`)
-    ).then((res) => {
+    )
+    .then((res) => {
         return res.json()
-    }).then((json) => {
-        console.log(json.name, json.weather[0].main)
+    })
+    .then((json) => {
         const weatherData = {
-            loaction : json.name,
-            weather :json.weather[0].main
+            location : json.name,
+            weather : json.weather[0].main
         }
         weatherDataActive(weatherData);
     })
     .catch((err) => {
-        console.error(err)
+        console.log(err)
     })
 };
 
