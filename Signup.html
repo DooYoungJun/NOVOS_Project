@@ -18,14 +18,14 @@
 
             const formData = new FormData(event.target);
 
-            fetch('http://localhost:3000/register', {
+            fetch('http://localhost:3000/register', { // URL을 '/register'로 수정
                 method: 'POST',
                 body: new URLSearchParams(formData)
             })
             .then(response => response.text())
             .then(message => {
                 alert(message); // 서버에서 받은 메시지를 알림으로 표시
-                if (message === "회원가입이 성공적으로 완료되었습니다.") {
+                if (message === "회원가입이 완료되었습니다.") {
                     // 회원가입이 성공하면 index.html로 이동
                     window.location.href = 'index.html';
                 }

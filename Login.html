@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>로그인</title>
+    <link rel="stylesheet" href="./Login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>로그인</h2>
+        <form action="/login" method="post">
+            <div>
+                <label for="username">사용자 이름:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div>
+                <label for="password">비밀번호:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">로그인</button>
+        </form>
+        <div class="signup-link">
+            <p>아직 계정이 없으신가요? <a href="Signup.html">회원가입</a></p>
+        </div>
+    </div>
+</body>
+</html>
