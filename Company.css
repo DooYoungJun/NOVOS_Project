@@ -80,3 +80,8 @@ page-header-title,h1.page-header-title{
 .media-text__media .media-text__content{
     align-self: center;
 }
+
+.three-body {
+    align-items: center;
+    justify-content: center;
+}
