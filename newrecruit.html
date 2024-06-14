@@ -8,6 +8,7 @@
 
 <title>採用情報 | 会社案内 | 株式会社Dream picture</title>
 <meta name='robots' content='max-image-preview:large' />
+<link rel="stylesheet" href="./footer.css">
 <link rel='dns-prefetch' href='//www.googletagmanager.com' />
 <link rel="alternate" type="application/rss+xml" title="株式会社Dream picture &raquo; フィード" href="https://dream-picture.com/feed/" />
 <link rel="alternate" type="application/rss+xml" title="株式会社Dream picture &raquo; コメントフィード" href="https://dream-picture.com/comments/feed/" />
@@ -166,17 +167,17 @@ font-size: 2.5rem;
 		<div id="site-header-container" class="site-header-container container">
 
 				<div class="site-header-logo">
-		<a href="https://dream-picture.com/">
-			<span><img src="http://dream-picture.com/wp-content/uploads/2024/02/meishi-1.jpg" alt="株式会社Dream picture" /></span>
+		<a href="newindex.html">
+			<span><img src="NOOVS mainLogo.png" alt="NOVOS" /></span>
 		</a>
 		</div>
 
 		
-		<nav id="global-nav" class="global-nav global-nav--layout--float-right"><ul id="menu-headernavigation" class="menu vk-menu-acc global-nav-list nav"><li id="menu-item-564" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="https://dream-picture.com/"><strong class="global-nav-name">ホーム</strong><span class="global-nav-description">HOME</span></a></li>
-<li id="menu-item-648" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://dream-picture.com/service/"><strong class="global-nav-name">サービス</strong><span class="global-nav-description">Service</span></a></li>
-<li id="menu-item-651" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-page-parent"><a href="https://dream-picture.com/company/"><strong class="global-nav-name">会社案内</strong><span class="global-nav-description">Company</span></a></li>
-<li id="menu-item-657" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-48 current_page_item"><a href="https://dream-picture.com/company/recruit/"><strong class="global-nav-name">採用情報</strong><span class="global-nav-description">Recruit</span></a></li>
-<li id="menu-item-846" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://dream-picture.com/contact/"><strong class="global-nav-name">お問い合わせ</strong><span class="global-nav-description">Contact</span></a></li>
+		<nav id="global-nav" class="global-nav global-nav--layout--float-right"><ul id="menu-headernavigation" class="menu vk-menu-acc global-nav-list nav"><li id="menu-item-564" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="newindex.html"><strong class="global-nav-name">ホーム</strong><span class="global-nav-description">HOME</span></a></li>
+<li id="menu-item-648" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="newservice.html"><strong class="global-nav-name">サービス</strong><span class="global-nav-description">Service</span></a></li>
+<li id="menu-item-651" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-page-parent"><a href="newcompany.html"><strong class="global-nav-name">会社案内</strong><span class="global-nav-description">Company</span></a></li>
+<li id="menu-item-657" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-48 current_page_item"><a href="newrecruit.html"><strong class="global-nav-name">採用情報</strong><span class="global-nav-description">Recruit</span></a></li>
+<li id="menu-item-846" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="newcontact.html"><strong class="global-nav-name">お問い合わせ</strong><span class="global-nav-description">Contact</span></a></li>
 </ul></nav>	</div>
 	</header>
 
@@ -234,8 +235,18 @@ font-size: 2.5rem;
 	
 </div><!-- [ /.site-body ] -->
 
+    <!-- Footer -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                });
+        });
+    </script>
 
-<footer class="site-footer">
+<!--footer class="site-footer">
 
 		
 				<div class="container site-footer-content">
@@ -247,7 +258,7 @@ font-size: 2.5rem;
 東京都足立区千住寿町15-4</p>
 
 </div>
-<!-- / .site-profile -->
+<!-- / .site-profile >
 </div>
 </aside></div><div class="col-lg-4 col-md-6"></div><div class="col-lg-4 col-md-6"></div>			</div>
 				</div>
@@ -255,7 +266,7 @@ font-size: 2.5rem;
 	
 	<div class="container site-footer-copyright">
 			<p>Copyright &copy; 株式会社Dream picture All Rights Reserved.</p><p>Powered by <a href="https://wordpress.org/">WordPress</a> with <a href="https://wordpress.org/themes/lightning/" target="_blank" title="Free WordPress Theme Lightning">Lightning Theme</a> &amp; <a href="https://wordpress.org/plugins/vk-all-in-one-expansion-unit/" target="_blank">VK All in One Expansion Unit</a></p>	</div>
-</footer> 
+</footer--> 
 <div id="vk-mobile-nav-menu-btn" class="vk-mobile-nav-menu-btn">MENU</div><div class="vk-mobile-nav vk-mobile-nav-drop-in" id="vk-mobile-nav"><aside class="widget vk-mobile-nav-widget widget_search" id="search-4"><form role="search" method="get" id="searchform" class="searchform" action="https://dream-picture.com/">
 				<div>
 					<label class="screen-reader-text" for="s">検索:</label>
@@ -300,5 +311,6 @@ var lightningOpt = {"header_scrool":"1","add_header_offset_margin":"1"};
 /* ]]> */
 </script>
 <script type="text/javascript" src="https://dream-picture.com/wp-content/themes/lightning/_g3/assets/js/main.js?ver=15.20.1" id="lightning-js-js"></script>
+<div id="footer"></div>
 </body>
 </html>
