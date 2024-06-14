@@ -22,7 +22,6 @@
 
       <!-- navbar -->
     <script>
-    
     document.addEventListener("DOMContentLoaded", function() {
       fetch('nav.html')
         .then(response => response.text())
@@ -36,9 +35,21 @@
           var logo = document.querySelector('.navbar-logo');
           logo.classList.toggle('hidden');
           });
+          var currentPage = window.location.pathname.split('/').pop();
+          console.log("Current page:", currentPage);
+          var menuItems = document.querySelectorAll('.navbar-item');
+          menuItems.forEach(function(item) {
+          console.log("Checking item:", item.getAttribute('data-link'));
+          if (item.getAttribute('data-link') === currentPage) {
+              item.classList.add('active');
+              console.log("Active class added to:", item);
+          } else {
+              item.classList.remove('active');
+          }
         });
       });
-      </script>
+    });
+    </script>
 </head>
 <body>
   <div id="navbar"></div>
