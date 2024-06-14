@@ -1,53 +1,48 @@
-<html>
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOVOS | HOME</title>
+    <link rel="stylesheet" href="styles.css"> <!-- CSS 파일 연결 -->
+    <title>홈페이지</title>
 
-    <script src="weather.js" defer></script>
-
-    <!-- css -->
-    <link rel="stylesheet" href="./NO_service.css" media="(min-width:600px)">
-    <link rel="stylesheet" href="./footer.css">
-    <link rel="stylesheet" href="index.css">
-
-    <!-- footer-->
-    <script>document.addEventListener("DOMContentLoaded", function() {
-        fetch('footer.html')
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById('footer').innerHTML = data;
-          });
-      });</script>    
-
-      <!-- navbar -->
+    <!-- navbar -->
     <script>
     
-    document.addEventListener("DOMContentLoaded", function() {
-      fetch('nav.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('navbar').innerHTML = data;
-          document.getElementById('navbar-toggle').addEventListener('click', function() {
-          var menu = document.querySelector('.navbar-menu');
-          menu.classList.toggle('active');
-          var toggle = document.getElementById('navbar-toggle');
-          toggle.classList.toggle('change');
-          var logo = document.querySelector('.navbar-logo');
-          logo.classList.toggle('hidden');
+        document.addEventListener("DOMContentLoaded", function() {
+          fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+              document.getElementById('navbar').innerHTML = data;
+              document.getElementById('navbar-toggle').addEventListener('click', function() {
+              var menu = document.querySelector('.navbar-menu');
+              menu.classList.toggle('active');
+              var toggle = document.getElementById('navbar-toggle');
+              toggle.classList.toggle('change');
+              var logo = document.querySelector('.navbar-logo');
+              logo.classList.toggle('hidden');
+              });
+            });
           });
-        });
-      });
-      </script>
+          </script>
+          
 </head>
 <body>
-  <div id="navbar"></div>
-  <br><br>
-  <h2 id="location-name-tag">오늘의 날씨</h2>
-  <div class="image-container">
-    <img id="weather-image" src="images/Clear.jpg" alt="weather Image">
-    <div class="text-overlay"></div>
-</div>
-    <div id="footer"></div>
+    <div class="container">
+        <h1>Welcome to My Homepage</h1>
+        <div class="content">
+            <p>This is a simple homepage with images and links.</p>
+        </div>
+        <div class="image-container">
+            <img src="image1.jpg" alt="Image 1">
+        </div>
+        <div class="gallery">
+            <a href="recruit.html"><img src="image2.jpg" alt="Image 2"></a>
+            <a href="service.html"><img src="image3.jpg" alt="Image 3"></a>
+            <a href="company.html"><img src="image4.jpg" alt="Image 4"></a>
+        </div>
+    </div>
 </body>
 </html>
