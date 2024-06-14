@@ -1,22 +1,54 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+.content {
+    text-align: center;
+    margin: 20px 0;
+}
+
 .image-container {
-    position: relative;
-    display: inline-block; /* 이미지 크기에 맞게 컨테이너 크기를 조절합니다. */
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .image-container img {
-    width: 100%; /* 이미지 크기를 조정합니다. 필요에 따라 값을 변경하세요. */
+    max-width: 100%;
     height: auto;
-    display: block;
 }
 
-.text-overlay {
-    position: absolute;
-    top: 50%; /* 텍스트를 중앙에 위치시키기 위해 사용합니다. */
-    left: 50%;
-    transform: translate(-50%, -50%); /* 텍스트를 정확하게 중앙에 위치시키기 위해 사용합니다. */
-    color: white; /* 텍스트 색상 */
-    font-size: 24px; /* 텍스트 크기 */
-    font-weight: bold; /* 텍스트 굵기 */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 텍스트 그림자 */
+.gallery {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery a {
+    flex: 1;
+    margin: 0 5px;
     text-align: center;
+    text-decoration: none;
+}
+
+.gallery img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
