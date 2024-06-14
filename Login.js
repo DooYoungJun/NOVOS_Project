@@ -211,7 +211,7 @@ app.get('/login', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
-*/
+
 
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -284,6 +284,42 @@ app.get('/login', (req, res) => {
             }
         });
     });
+});
+
+// 서버 시작
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
+
+*/
+
+const express = require('express');
+const bodyParser = require('body-parser');
+
+const app = express();
+const PORT = 3000;
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+// CORS 설정 (필요에 따라 추가)
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    next();
+});
+
+// GET 메서드로 로그인 처리
+app.get('/login.html', (req, res) => {
+    const { username, password } = req.query;
+
+    // 여기서 사용자 인증 로직을 구현하고, JSON 형식으로 응답을 보냄
+    if (username === 'admin' && password === 'admin123') {
+        res.json({ success: true });
+    } else {
+        res.json({ success: false, message: '사용자 이름 또는 비밀번호가 잘못되었습니다.' });
+    }
 });
 
 // 서버 시작
