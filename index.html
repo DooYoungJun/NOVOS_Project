@@ -1,53 +1,146 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NOVOS | HOME</title>
 
-    <script src="weather.js" defer></script>
-
-    <!-- css -->
+    <!-- CSS -->
     <link rel="stylesheet" href="./NO_service.css" media="(min-width:600px)">
     <link rel="stylesheet" href="./footer.css">
     <link rel="stylesheet" href="index.css">
 
-    <!-- footer-->
-    <script>document.addEventListener("DOMContentLoaded", function() {
-        fetch('footer.html')
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById('footer').innerHTML = data;
-          });
-      });</script>    
+    <!-- Scripts -->
+    <script src="weather.js" defer></script>
 
-      <!-- navbar -->
+    <!-- Footer -->
     <script>
-    
-    document.addEventListener("DOMContentLoaded", function() {
-      fetch('nav.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('navbar').innerHTML = data;
-          document.getElementById('navbar-toggle').addEventListener('click', function() {
-          var menu = document.querySelector('.navbar-menu');
-          menu.classList.toggle('active');
-          var toggle = document.getElementById('navbar-toggle');
-          toggle.classList.toggle('change');
-          var logo = document.querySelector('.navbar-logo');
-          logo.classList.toggle('hidden');
-          });
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                });
         });
-      });
-      </script>
+    </script>
+
+    <!-- Navbar -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('nav.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+                    document.getElementById('navbar-toggle').addEventListener('click', function() {
+                        var menu = document.querySelector('.navbar-menu');
+                        menu.classList.toggle('active');
+                        var toggle = document.getElementById('navbar-toggle');
+                        toggle.classList.toggle('change');
+                        var logo = document.querySelector('.navbar-logo');
+                        logo.classList.toggle('hidden');
+                    });
+                });
+        });
+    </script>
+
+    <!-- IT News -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const API_KEY = 'YOUR_API_KEY'; // 여기에 본인의 API 키를 입력해주세요.
+            const API_URL = `https://news.yahoo.co.jp/rss/topics/it.xml`;
+
+            fetch(API_URL)
+                .then(response => response.text())
+                .then(data => {
+                    const parser = new DOMParser();
+                    const xml = parser.parseFromString(data, 'application/xml');
+                    const items = xml.querySelectorAll('item');
+
+                    const newsContainer = document.getElementById('it-news');
+
+                    items.forEach(item => {
+                        const title = item.querySelector('title').textContent;
+                        const link = item.querySelector('link').textContent;
+
+                        const newsItem = document.createElement('div');
+                        newsItem.classList.add('news-item');
+
+                        const newsTitle = document.createElement('a');
+                        newsTitle.textContent = title;
+                        newsTitle.href = link;
+                        newsTitle.target = '_blank';
+
+                        newsItem.appendChild(newsTitle);
+                        newsContainer.appendChild(newsItem);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching IT news:', error);
+                });
+        });
+    </script>
 </head>
 <body>
-  <div id="navbar"></div>
-  <br><br>
-  <h2 id="location-name-tag">오늘의 날씨</h2>
-  <div class="image-container">
-    <img id="weather-image" src="images/Clear.jpg" alt="weather Image">
-    <div class="text-overlay"></div>
-</div>
+    <div id="navbar"></div>
+
+    <div class="image-container2">
+        <img src="NOOVS mainLogo.png" alt="Image 1">
+    </div>
+
+    <div class="container">
+        <h1>노보스 뜻 들어감</h1>
+        <br>
+
+        <div class="content">
+            <p>MEETS CUSTOMER NEEDS, SOLVES ISSUES AND DELIVERS VALUE</p>
+        </div>
+        
+        <div class="content">
+            <p>"人材 X 顧客 X 信頼"</p>
+            <p>働く人の力を引き出し、繋ぎ、大切にしながら効率と生産性を高めることで顧客に利便性の高いシステムや製品を提供し、サービスの質を上げる事で確かな信頼関係を築きます。</p>
+            <p>技術的なスキル、高い目的意識を持った人材を育てることで豊かな社会への発展に貢献します。</p>
+            <p>協調、融和、相互信頼により総合力を発揮し、永続的な事業活動を通じて広く社会に貢献する事と社員に創造と挑戦の場を提供し、豊かで安定した生活を創出することが株式会社NOVO.Sの設立した目的でもあります。</p>
+        </div>
+
+        <div class="gallery">
+            <div class="gallery-item">
+                <a href="NO_service.html">
+                    <img src="system.jpeg" alt="Image 2">
+                    <p>お客様に最高の結果をお届けします。</p>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="Company.html">
+                    <img src="compant.jpeg" alt="Image 3">
+                    <p>常に信頼をお届けする会社を目指します。</p>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="Recruit.html">
+                    <img src="Recruit.jpeg" alt="Image 4">
+                    <p>技術的なスキル、高い目的意識を持った人材を育てることで豊かな社会への発展に貢献します。</p>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="Contact.html">
+                    <img src="Contact.webp" alt="Image 4">
+                    <p>常に最高の結果をもたらすことをお約束いたします。</p>
+                </a>
+            </div>
+        </div>
+
+        <div id="it-news">
+            <!-- 여기에 IT 뉴스 기사가 동적으로 추가됩니다. -->
+        </div>
+    </div>
+
+    <br><br>
+    <h2 id="location-name-tag">오늘의 날씨</h2>
+    <div class="image-container">
+        <img id="weather-image" src="images/Clear.jpg" alt="weather Image">
+        <div class="text-overlay"></div>
+    </div>
+
     <div id="footer"></div>
 </body>
 </html>

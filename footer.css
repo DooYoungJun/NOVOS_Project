@@ -1,86 +1,47 @@
-::after, ::before{
-    box-sizing: border-box;
-}
-
-div {
-    display: block;
-    unicode-bidi: isolate;
-}
-
-footer{
-    display: block;
-    unicode-bidi: isolate;
-}
-
-img {
-    overflow-clip-margin: content-box;
-    overflow: clip;
-}
-
-p {
-    line-height: 1.7em;
-    margin-block-start: 0;
-}
-
-.container {
+/* footer css 영역 */
+footer {
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+    height: auto; /* 내용에 따라 높이 자동 조정 */
+    margin-top: 20px;
+    text-align: center;
+    background-color: #f1f1f1;
 }
 
-.site-footer{
-    border-top: 1px solid #3461ac;
-    display: block;
-    overflow: hidden;
-    font-size: 12px;
-    content-visibility: auto;
-    contain-intrinsic-size: 370px;
-    position: relative;
+.footer-content {
+    display: flex; /* Flexbox 사용 */
+    align-items: center; /* 수직 가운데 정렬 */
+    padding: 10px;
 }
 
-.site-footer-content{
-    position: relative;
-    padding-top: 3rem;
+.footer-content p {
+    margin: 10px 0; /* 단락 요소들 사이에 여백 추가 */
+    text-align: left; /* 텍스트 왼쪽 정렬 */
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+.footer-content img {
+    max-width: 100px;
+    margin-top: 10px;
 }
 
-.footer-box {
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+.footer-content iframe {
+    width: 40%; /* 지도의 너비를 전체의 40%로 설정 */
+    height: auto; /* 높이 자동 조정 */
+    margin-right: 20px; /* 지도 오른쪽 여백 설정 */
 }
 
-.veu_profile .profile {
-    overflow: hidden;
-}
+@media screen and (max-width: 767px) {
+    .footer-content {
+        flex-wrap: wrap; /* 작은 화면에서는 텍스트가 줄 바꿈되도록 설정 */
+    }
 
-.veu_profile .media_outer {
-    position: relative;
-    display: block;
-    overflow: hidden;
-    margin:  .8em 0 .8em;
-    box-sizing: border-box;
-}
+    .footer-content p {
+        flex: 1; /* 텍스트를 자동으로 너비를 분배하여 지도의 옆에 배치 */
+        margin-right: 20px; /* 지도와 텍스트 사이 간격 설정 */
+    }
 
-.veu_profile .media_outer img {
-    max-width: 100%;
-    height: auto;
-}
-
-.veu_profile .profile_text {
-    margin-bottom: 1em;
-    font-size: 14px;
-}
-
-.site-footer-copyright {
-    padding: 1rem;
+    .footer-content iframe {
+        width: 100%; /* 화면 크기가 작을 때는 지도를 가득 채우도록 설정 */
+        margin-right: 0; /* 작은 화면에서는 오른쪽 여백 제거 */
+        margin-bottom: 50px; /* 지도와 텍스트 사이 간격 설정 */
+    }
 }
