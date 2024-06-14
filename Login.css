@@ -1,69 +1,64 @@
+/* Global styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
 }
 
-.login-container {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
+/* Styling the container */
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 400px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
 }
 
-.login-container h2 {
-    margin-bottom: 20px;
-    color: #333;
+/* Styling the login form */
+#login-form {
+  text-align: left;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
+/* Styling the heading */
+h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
-input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 14px;
+/* Styling the input fields */
+.login_input input {
+  border: 2px solid lightgrey;
+  border-radius: 40px;
+  outline: none;
+  width: 100%; /* Adjusted width */
+  height: 40px; /* Adjusted height */
+  padding: 0 15px; /* Adjusted padding */
+  margin-bottom: 10px;
+  box-sizing: border-box; /* Include padding and border in the width */
 }
 
-button {
-    width: 100%;
-    padding: 10px;
-    background: #28a745;
-    border: none;
-    border-radius: 4px;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+/* Styling the submit button */
+.submit_button input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: black;
+  color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 40px;
+  outline: none;
+  font-size: 14px;
+  cursor: pointer;
+  box-sizing: border-box; /* Include padding and border in the width */
 }
 
-button:hover {
-    background: #218838;
-}
-
-.signup-link {
-    margin-top: 10px;
-    text-align: center;
-}
-
-.signup-link a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.signup-link a:hover {
-    text-decoration: underline;
+/* Hover effect for the submit button */
+.submit_button input[type="submit"]:hover {
+  background-color: #0056b3;
 }
