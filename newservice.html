@@ -8,6 +8,7 @@
 
 <title>サービス | 株式会社Dream picture</title>
 <meta name='robots' content='max-image-preview:large' />
+<link rel="stylesheet" href="./footer.css">
 <link rel='dns-prefetch' href='//www.googletagmanager.com' />
 <link rel="alternate" type="application/rss+xml" title="株式会社Dream picture &raquo; フィード" href="https://dream-picture.com/feed/" />
 <link rel="alternate" type="application/rss+xml" title="株式会社Dream picture &raquo; コメントフィード" href="https://dream-picture.com/comments/feed/" />
@@ -17,6 +18,8 @@
 .grecaptcha-badge{bottom: 85px !important;}
 .veu_promotion-alert__content--text { border: 1px solid rgba(0,0,0,0.125); padding: 0.5em 1em; border-radius: var(--vk-size-radius); margin-bottom: var(--vk-margin-block-bottom); font-size: 0.875rem; } /* Alert Content部分に段落タグを入れた場合に最後の段落の余白を0にする */ .veu_promotion-alert__content--text p:last-of-type{ margin-bottom:0; margin-top: 0; }
 :root {--ver_page_top_button_url:url(https://dream-picture.com/wp-content/plugins/vk-all-in-one-expansion-unit/assets/images/to-top-btn-icon.svg);}@font-face {font-weight: normal;font-style: normal;font-family: "vk_sns";src: url("https://dream-picture.com/wp-content/plugins/vk-all-in-one-expansion-unit/inc/sns/icons/fonts/vk_sns.eot?-bq20cj");src: url("https://dream-picture.com/wp-content/plugins/vk-all-in-one-expansion-unit/inc/sns/icons/fonts/vk_sns.eot?#iefix-bq20cj") format("embedded-opentype"),url("https://dream-picture.com/wp-content/plugins/vk-all-in-one-expansion-unit/inc/sns/icons/fonts/vk_sns.woff?-bq20cj") format("woff"),url("https://dream-picture.com/wp-content/plugins/vk-all-in-one-expansion-unit/inc/sns/icons/fonts/vk_sns.ttf?-bq20cj") format("truetype"),url("https://dream-picture.com/wp-content/plugins/vk-all-in-one-expansion-unit/inc/sns/icons/fonts/vk_sns.svg?-bq20cj#vk_sns") format("svg");}
+
+
 </style>
 <link rel='preload' id='wp-block-library-css-preload' href='https://dream-picture.com/wp-includes/css/dist/block-library/style.min.css?ver=6.5.4' as='style' onload="this.onload=null;this.rel='stylesheet'"/>
 <link rel='stylesheet' id='wp-block-library-css' href='https://dream-picture.com/wp-includes/css/dist/block-library/style.min.css?ver=6.5.4' media='print' onload="this.media='all'; this.onload=null;">
@@ -161,7 +164,7 @@ font-size: 2.5rem;
 
 				<div class="site-header-logo">
 		<a href="https://dream-picture.com/">
-			<span><img src="http://dream-picture.com/wp-content/uploads/2024/02/meishi-1.jpg" alt="株式会社Dream picture" /></span>
+			<span><img src="NOOVS mainLogo.png" alt="NOVOS" /></span>
 		</a>
 		</div>
 
@@ -172,6 +175,17 @@ font-size: 2.5rem;
 <li id="menu-item-657" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://dream-picture.com/company/recruit/"><strong class="global-nav-name">採用情報</strong><span class="global-nav-description">Recruit</span></a></li>
 <li id="menu-item-846" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://dream-picture.com/contact/"><strong class="global-nav-name">お問い合わせ</strong><span class="global-nav-description">Contact</span></a></li>
 </ul></nav>	</div>
+
+    <!-- Footer -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                });
+        });
+    </script>
 	</header>
 
 
@@ -341,7 +355,7 @@ font-size: 2.5rem;
 </div><!-- [ /.site-body ] -->
 
 
-<footer class="site-footer">
+<!--footer class="site-footer">
 
 		
 				<div class="container site-footer-content">
@@ -353,7 +367,7 @@ font-size: 2.5rem;
 東京都足立区千住寿町15-4</p>
 
 </div>
-<!-- / .site-profile -->
+<!-- / .site-profile >
 </div>
 </aside></div><div class="col-lg-4 col-md-6"></div><div class="col-lg-4 col-md-6"></div>			</div>
 				</div>
@@ -361,7 +375,7 @@ font-size: 2.5rem;
 	
 	<div class="container site-footer-copyright">
 			<p>Copyright &copy; 株式会社Dream picture All Rights Reserved.</p><p>Powered by <a href="https://wordpress.org/">WordPress</a> with <a href="https://wordpress.org/themes/lightning/" target="_blank" title="Free WordPress Theme Lightning">Lightning Theme</a> &amp; <a href="https://wordpress.org/plugins/vk-all-in-one-expansion-unit/" target="_blank">VK All in One Expansion Unit</a></p>	</div>
-</footer> 
+</footer--> 
 <div id="vk-mobile-nav-menu-btn" class="vk-mobile-nav-menu-btn">MENU</div><div class="vk-mobile-nav vk-mobile-nav-drop-in" id="vk-mobile-nav"><aside class="widget vk-mobile-nav-widget widget_search" id="search-4"><form role="search" method="get" id="searchform" class="searchform" action="https://dream-picture.com/">
 				<div>
 					<label class="screen-reader-text" for="s">検索:</label>
@@ -409,5 +423,6 @@ var lightningOpt = {"header_scrool":"1","add_header_offset_margin":"1"};
 /* ]]> */
 </script>
 <script type="text/javascript" src="https://dream-picture.com/wp-content/themes/lightning/_g3/assets/js/main.js?ver=15.20.1" id="lightning-js-js"></script>
+<div id="footer"></div>
 </body>
 </html>
